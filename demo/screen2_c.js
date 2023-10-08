@@ -14,9 +14,9 @@ export default function screen2_c(){
 
     function checkAll(checkLower, checkUpper, checkNumerr, checkSpecial){
         if(checkLower && checkUpper && checkNumerr && checkSpecial )
-            alert("GENERATE PASSWORD SUCCESS");
+            alert("SUCCESS!!!");
         else
-            alert("FAIL");
+            alert("FAIL!!!");
 
         
         
@@ -45,7 +45,7 @@ export default function screen2_c(){
     return(
         <View style={styles.container}>
             <View style={styles.main}>
-                <View style={styles.top}>
+                <View style={styles.header}>
                     <Text style={{fontSize:'25px', fontWeight: '700', color: '#FFFFFF'}}>
                         PASSWORD{'\n'}
                         GENERATOR
@@ -58,7 +58,7 @@ export default function screen2_c(){
                     </TextInput>
                 </View>
 
-                <View style={styles.bottom}>
+                <View style={styles.footer}>
                     <View style={styles.row}>
                         <Text style={styles.text}>
                             Password length
@@ -104,7 +104,7 @@ export default function screen2_c(){
                        </CheckBox>
                     </View>
 
-                    <TouchableOpacity style={styles.gui} 
+                    <TouchableOpacity style={styles.send} 
                             onPress={() => checkAll(checkLowerCase(passWord, isCheckedLower)
                                                   , checkUpperCase(passWord, isCheckedUpper)
                                                   , checkNumber(passWord, isCheckedNumber)
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
       
     },
 
-    top:{
+    header:{
         height: '110px',
         justifyContent: 'flex-end',
     },
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
          paddingLeft: '10px'
     },
 
-    bottom: {
+    footer: {
         height: '60%',
         width: '90%',
         flexDirection: 'column',
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         paddingRight: '2px'
      },
 
-     gui:{
+     send:{
         width: '250px',
         borderRadius: '2px',
         justifyContent: 'center',

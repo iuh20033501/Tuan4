@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground,TextInput, Button, CheckBox} from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
-import { Feather, Entypo ,AntDesign, FontAwesome   } from '@expo/vector-icons';
+
+import { Entypo} from '@expo/vector-icons';
 
 const image = {uri: 'https://product.hstatic.net/200000420363/product/tai-nghe-rkx_46ecba7822eb413eb5c889d7ed92dc0b_master.jpg'};
 
@@ -43,7 +43,7 @@ export default function screen2_b(){
                     </View>
                 </View>
                 <View style={styles.center_2}>
-                    <TouchableOpacity style={styles.addImage} onPress={() => thongBao()}>
+                    <TouchableOpacity style={styles.addImg} onPress={() => thongBao()}>
                         <Entypo name="camera" size={50} color="black" />
                         <Text style={{fontSize: '20px', fontWeight: '700',marginLeft: '15px'}} onPress={() => alert('Chọn ảnh')}> 
                             Thêm hình ảnh
@@ -63,7 +63,7 @@ export default function screen2_b(){
             </View>
 
             <View style={styles.footer}>
-                <TouchableOpacity style={styles.gui}>
+                <TouchableOpacity style={styles.send}>
                     <Text style={{fontSize: '23px', fontWeight: '600', color: 'white'}}>
                         Gửi
                     </Text>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     },
     
 
-    addImage:{
+    addImg:{
         borderWidth: 1,
         borderColor: 'blue',
         borderRadius: '5px',
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
-    gui:{
+    send:{
         width: '330px',
         borderRadius: '5px',
         justifyContent: 'center',
